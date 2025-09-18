@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+# 👤 User Profiles App (React + Ant Design)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A single-page React application that fetches user data from a public API and displays it as a collection of interactive profile cards.  
+Built with **React**, **Ant Design**, and **Framer Motion** for smooth UI and animations.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- 📡 **Fetch Users from API**  
+  Uses [JSONPlaceholder](https://jsonplaceholder.typicode.com/users) to display 10 user profiles.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🎭 **Dynamic Avatars**  
+  Unique avatars generated using the [DiceBear Avatars API](https://avatars.dicebear.com/).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 🎨 **Modern UI with Ant Design**  
+  Responsive cards, modals, and forms styled using Ant Design.
 
-### `npm test`
+- ✨ **Animations with Framer Motion**  
+  Smooth hover effects, card transitions, and animated background colors.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 📝 **Edit & Delete Functionality**  
+  - Edit user details via a modal form.  
+  - Delete a user card dynamically.  
+  - Like (❤️) users with toggle effect.
 
-### `npm run build`
+- 🔄 **Loading State**  
+  Displays a centered spinner while data is being fetched.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📸 Demo Preview
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| User Cards | Edit Modal |
+|------------|------------|
+| ![cards](https://user-profiles-antd-opal.vercel.app/) | ![modal](https://user-profiles-antd-opal.vercel.app/) |
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠️ Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **React** (Functional Components + Hooks)  
+- **Ant Design (antd)** – UI Components  
+- **Framer Motion** – Animations  
+- **JSONPlaceholder API** – User Data  
+- **DiceBear API** – Avatars  
+- **SpinKit / Ant Design Spin** – Loader  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📂 Project Structure
 
-## Learn More
+```
+user-profiles-antd/
+├── public/                 # Static files
+├── src/
+│   ├── components/
+│   │   └── UserCardAntd.js # User profile card component
+│   ├── App.js              # Main App logic
+│   ├── index.css           # Global styles
+│   └── index.js            # Entry point
+├── package.json
+└── README.md
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## ⚡ Getting Started
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Follow these steps to run the project locally:
 
-### Analyzing the Bundle Size
+### 1. Clone the repo
+```
+bash
+git clone https://github.com/<your-username>/user-profiles-antd.git
+cd user-profiles-antd
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 2. Install dependencies
+```
+npm install
+```
 
-### Making a Progressive Web App
+### 2. Start the dev server
+```
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Runs the app in development mode.
+Open http://localhost:3000 in your browser.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📦 Build & Deploy
 
-### Deployment
+### Build for Production
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+npm run build
+```
 
-### `npm run build` fails to minify
+This will create a build/ folder with production-ready optimized code.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Deploy on Vercel
+
+```
+vercel --prod
+```
+
+Your app will be deployed with a public URL
